@@ -22,6 +22,25 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
+      - name: Instalar dependencias para Chrome Headless
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libnss3 \
+            libxss1 \
+            libasound2 \
+            libx11-xcb1 \
+            libxcomposite1 \
+            libxrandr2 \
+            libxdamage1 \
+            libxtst6 \
+            libgtk-3-0 \
+            libxext6 \
+            libxfixes3 \
+            libxcb1 \
+            fonts-liberation \
+            libappindicator3-1 \
+            xdg-utils
 
       - name: npm install, build, and test
         run: |
@@ -62,4 +81,5 @@ jobs:
           app-name: 'apptestangular'
           slot-name: 'Production'
           package: .
+
           

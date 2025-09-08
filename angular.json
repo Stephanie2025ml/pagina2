@@ -13,7 +13,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-  "outputPath": "dist/pagina2",
   "polyfills": ["zone.js"],
   "tsConfig": "tsconfig.app.json",
             "assets": [

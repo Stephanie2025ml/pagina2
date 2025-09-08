@@ -60,9 +60,10 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'apptestangular'
-          package: ./dist/pagina2
+          package: ./dist/apptestangular
 
           
+
 
 
 

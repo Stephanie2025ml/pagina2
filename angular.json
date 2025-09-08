@@ -13,9 +13,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "index": "src/index.html",
-            "browser": "src/main.ts",
-            "outputPath": "./dist/pagina2",
+             "outputPath": "dist/pagina2",
+             "index": "src/index.html",
+             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],

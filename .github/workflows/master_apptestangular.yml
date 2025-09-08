@@ -60,10 +60,11 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'apptestangular'
-          slot-name: 'hzfjhmftdbg3bbcm'
+          slot-name: 'Production'
           package: ./dist/pagina2
 
           
+
 
 
 

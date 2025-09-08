@@ -4,7 +4,6 @@
 module.exports = function (config) {
   config.set({
     basePath: '',
-    browsers: ['ChromeHeadless'],
     frameworks: ['jasmine'],
     plugins: [
       require('karma-jasmine'),

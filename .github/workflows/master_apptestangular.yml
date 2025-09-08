@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-          
+
       - name: npm install, build, and test
         run: |
           npm install
@@ -32,8 +32,8 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: angularapp-build
-          path: ./dist/pagina2
+          name: node-app
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,36 +46,20 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: angularapp-build
-          path: ./dist/pagina2
-    
+          name: node-app
+      
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_31AAFA6EBBF44D3C80B0ADBD749DCB21 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_53291C16CD2E4AD78D5D6EA11040F1EA }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_466E8A5D3257459C9F89B9C7AD183039 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_9165A25BADEC445D99FF23C69DEC48CD }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_2B6C17A0E6A34F9AA63160DEBAB39FCF }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_FA6EFD5ABD7A4518B5325EB3F3BD5476 }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'apptestangular'
-          package: ./dist/pagina2
-
+          slot-name: 'Production'
+          package: .
           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

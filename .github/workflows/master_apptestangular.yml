@@ -32,8 +32,8 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: pagina2
-          path: .
+          name: angularapp-build
+          path: ./dist/apptestangular
 
   deploy:
     runs-on: ubuntu-latest
@@ -46,7 +46,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: pagina2
+          name: angularapp-build
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -63,6 +63,7 @@ jobs:
           package: ./dist/apptestangular
 
           
+
 
 
 

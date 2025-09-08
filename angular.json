@@ -14,7 +14,7 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "outputPath": "dist/pagina2",
+            "outputPath": "./dist/pagina2",
             "polyfills": [
               "zone.js"
             ],
@@ -84,8 +84,7 @@
             ],
             "styles": [
               "src/styles.css"
-            ],
-            "karmaConfig": "karma.conf.js"
+            ]
           }
         }
       }

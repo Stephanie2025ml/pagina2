@@ -1,3 +1,15 @@
 <header class="hero">
 <img src="ardilla.png" alt="Logo de mi sitio" class="logo" />
 <h1>Stephanie's Web Page</h1></header>
+   <script>
+    fetch('/api/getEmpleados')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('data-list');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = JSON.stringify(item);
+          list.appendChild(li);
+        });
+      });
+  </script>

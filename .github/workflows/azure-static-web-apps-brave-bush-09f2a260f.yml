@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master
-      - mantenimiento  # 👈 Esta es tu rama de mantenimiento
-      - mantenimiento  # 👈 Esta es tu rama de mantenimiento
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:

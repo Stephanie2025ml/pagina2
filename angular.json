@@ -19,7 +19,12 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+  {
+    "glob": "login.html",
+    "input": "src/login",
+    "output": "login"
+  }
             ],
             "styles": [
               "src/styles.css"

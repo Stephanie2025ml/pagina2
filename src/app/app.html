@@ -1,15 +1,21 @@
-<header class="hero">
-<img src="ardilla.png" alt="Logo de mi sitio" class="logo" />
-<h1>soy branch Master</h1></header>
-   <script>
-    fetch('/api/getEmpleados')
-      .then(res => res.json())
-      .then(data => {
-        const list = document.getElementById('data-list');
-        data.forEach(item => {
-          const li = document.createElement('li');
-          li.textContent = JSON.stringify(item);
-          list.appendChild(li);
-        });
-      });
-  </script>
+<header class="navbar">
+  <div class="logo">🐿️ StephanieWeb</div>
+  <nav class="menu">
+    <ul>
+      <li><a routerLink="/app" >Inicio</a></li>
+      <li><a routerLink="/series" >Series de TV</a></li>
+      <li><a routerLink="/articulos" >Articulos Cientificos</a></li>
+      <li><a routerLink="/musica" >Musica</a></li>
+      <li><a routerLink="/login" >Iniciar sesión</a></li>
+      <li><a href="#" class="btn-comienza">Comienza</a></li>
+    </ul>
+  </nav>
+</header>
+ <router-outlet></router-outlet>
+<div class="video-container">
+<video controls>
+  <source src="Landscape.mp4" type="video/mp4">
+  Tu navegador no soporta el elemento de video.
+</video>
+
+</div>

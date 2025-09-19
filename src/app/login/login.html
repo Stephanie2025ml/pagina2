@@ -1,0 +1,10 @@
+<div class="login-form">
+
+  <form (ngSubmit)="onLogin()">
+      <h2>Iniciar Sesión</h2>
+    <input type="text" placeholder="Usuario" [(ngModel)]="username" name="username" required />
+    <input type="password" placeholder="Contraseña" [(ngModel)]="password_hash" name="password" required />
+    <button type="submit" (ngSubmit)="onLogin()">Entrar</button>
+  </form>
+</div>
+

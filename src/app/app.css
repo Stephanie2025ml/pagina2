@@ -21,6 +21,7 @@ h1 {
   border-radius: 3px;
 }
 
+
 /* 🎥 Video responsivo */
 .video-container {
   position: relative;
@@ -53,12 +54,16 @@ h1 {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  white-space: nowrap; /* evita que se rompa en varias líneas */
 }
 
 /* 📋 Menú de navegación */
 .menu {
   display: flex;
   width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
 }
 
 .menu ul {
@@ -71,10 +76,43 @@ h1 {
   flex-wrap: wrap;
 }
 
+.menu a {
+  font-family: 'Poppins', sans-serif;
+}
+.menu a {
+  text-decoration: none; /* elimina el subrayado */
+  color: #e0e0e0; /* gris claro moderno */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.link-inicio { color: #00c2ff; }
+.link-series { color: #ff6ec7; }
+.link-articulos { color: #f5b700; }
+.link-musica { color: #9dff20; }
+.link-login { color: #ff4f81; }
+
 .menu a:hover {
-  color: #52f521;
+  color: #52f521; /* verde brillante al pasar el mouse */
 }
 
+.menu a {
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #52f521;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
 /* 🍔 Botón hamburguesa */
 .menu-toggle {
   display: none;
@@ -86,8 +124,7 @@ h1 {
 }
 
 /* 🎨 Botones */
-.btn-acceso,
-.btn-comienza {
+.btn-acceso {
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   text-align: center;
@@ -99,13 +136,6 @@ h1 {
   border: 1px solid #fff;
 }
 
-.btn-comienza {
-  background: linear-gradient(to right, #202b68, #1beb13);
-  color: white;
-  font-weight: bold;
-  background-size: 200% auto;
-  animation: shine 4s linear infinite;
-}
 
 /* ✨ Animación */
 @keyframes shine {
@@ -126,7 +156,7 @@ h1 {
   }
 
   .menu.active {
-    display: block;
+    display: flex;
   }
 
   .menu ul {
@@ -137,7 +167,8 @@ h1 {
   }
 
   .menu-toggle {
-    display: block;
+    display: flex;
+    background-color: rgb(209, 17, 17);
   }
 
   .hero {

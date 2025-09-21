@@ -1,7 +1,7 @@
 <header class="navbar">
   <div class="logo">🐿️ StephanieWeb</div>
-  <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-  <nav class="menu">
+  <button class="menu-toggle" aria-label="Abrir menú" (click)="toggleMenu()">☰</button>
+  <nav class="menu" [class.active]="menuVisible">
     <ul>
       <li><a routerLink="/app" class="link-inicio">Inicio</a></li>
       <li><a routerLink="/series" class="link-series">Series de TV</a></li>

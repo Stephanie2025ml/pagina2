@@ -34,42 +34,62 @@ h1 {
   height: 100%;
 }
 
-/* Barra de navegación */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
   background-color: #111;
-  padding: 1rem 2rem;
   color: white;
-  font-family: 'Segoe UI', sans-serif;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
-/* Logo dentro de la navbar */
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
-/* Menú de navegación */
-.menu ul {
-  list-style: none;
+.menu {
   display: flex;
-  gap: 1.5rem;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
   margin: 0;
   padding: 0;
 }
 
-/* Enlaces del menú */
-.menu a,
-.menu button {
-  text-decoration: none;
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
   color: white;
-  font-weight: 500;
-  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    background-color: #222;
+    padding: 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu.active {
+    display: block;
+  }
 }
 
 /* Efecto hover en enlaces */

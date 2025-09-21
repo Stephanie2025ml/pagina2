@@ -16,5 +16,9 @@ goToLogin(event: Event) {
   event.preventDefault();
   window.location.href = 'login/login.html';
 }
+ menuVisible = false;
 
+  toggleMenu() {
+    this.menuVisible = !this.menuVisible;
+  }
 }

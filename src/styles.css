@@ -2,20 +2,24 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-background-image: url('/wallpaper.jpg');
+  background-image: url('/wallpaper.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   position: relative;
   color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .contenido {
   text-align: center;
-  padding: 50px;
-  background: rgba(0, 0, 0, 0.4); /* semitransparente para destacar contenido */
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  margin: 50px;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-sizing: border-box;
 }
 
 .marca-agua {
@@ -26,4 +30,19 @@ background-image: url('/wallpaper.jpg');
   color: rgba(255, 255, 255, 0.3);
   pointer-events: none;
   z-index: 999;
+}
+
+/* 📱 Responsive para móviles */
+@media (max-width: 768px) {
+  .contenido {
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 6px;
+  }
+
+  .marca-agua {
+    font-size: 12px;
+    right: 10px;
+    bottom: 5px;
+  }
 }

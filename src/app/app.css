@@ -156,7 +156,7 @@ h1 {
   }
 
   .menu.active {
-    display: flex;
+    display: block;
   }
 
   .menu ul {
@@ -167,7 +167,7 @@ h1 {
   }
 
   .menu-toggle {
-    display: flex;
+    display: block;
     background-color: rgb(209, 17, 17);
   }
 

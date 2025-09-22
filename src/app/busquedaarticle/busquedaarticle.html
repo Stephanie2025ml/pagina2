@@ -1,0 +1,25 @@
+<div class="busqueda-container">
+  <h2>🔍 Buscar artículos científicos</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="consulta"
+    placeholder="Escribe tu consulta semántica..."
+    class="consulta-input"
+  />
+  <button (click)="buscarArticulos()" [disabled]="cargando">Buscar</button>
+
+  <div *ngIf="cargando">Buscando artículos...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div *ngIf="resultados.length > 0">
+    <h3>Resultados relevantes:</h3>
+    <ul>
+      <li *ngFor="let articulo of resultados">
+        <strong>{{ articulo.titulo }}</strong><br />
+        <a [href]="articulo.url_pdf" target="_blank">Ver PDF</a><br />
+        <small>Distancia semántica: {{ articulo.distancia | number:'1.2-2' }}</small>
+      </li>
+    </ul>
+  </div>
+</div>

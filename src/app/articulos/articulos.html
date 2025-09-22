@@ -1,7 +1,12 @@
-<div class="articulo-container">
-  <h2>{{ titulo }}</h2>
-  <p>{{ resumen }}</p>
+<h2>{{ titulo }}</h2>
 
-  <a [href]="pdfUrl" target="_blank">📄 Ver PDF completo</a>
+<input type="file" (change)="onFileSelected($event)" accept="application/pdf" />
+
+<div *ngIf="textoExtraido">
+
+  <h3>Texto extraído del PDF:</h3>
+  <pre>{{ textoExtraido }}</pre>
+ <div *ngIf="procesando">Procesando archivo...</div>
+
+
 </div>
-

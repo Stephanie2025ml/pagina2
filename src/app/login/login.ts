@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { LoginService } from './login.service';
@@ -11,10 +11,12 @@ import { LoginService } from './login.service';
   styleUrls: ['./login.css'],
   imports: [CommonModule, FormsModule]
 })
+
 export class LoginComponent {
   username = '';
   password_hash = '';
   errorMessage = '';
+
 
   constructor(private loginService: LoginService) {}
 
@@ -34,3 +36,5 @@ export class LoginComponent {
     });
   }
 }
+
+ 

@@ -3,12 +3,14 @@ import { appConfig } from './app/app.config';
 import { App } from './app/app';
 import { LoginComponent } from './app/login/login'
 import { Articulos } from './app/articulos/articulos'
+import { busquedaarticleComponent } from './app/busquedaarticle/busquedaarticle'
 import { provideRouter } from '@angular/router';
 
 // Agrega las rutas aquí
 const routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'articulos', component: Articulos }
+  { path: 'articulos', component: Articulos },
+  { path: 'busquedaarticle', component: busquedaarticleComponent }
 ];
 
 // Extender configuración original con rutas
